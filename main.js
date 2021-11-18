@@ -11,3 +11,13 @@ request.onload = () => {
   populateHeader(superHeroes);
   showHeroes(superHeroes);
 };
+
+function populateHeader(obj) {
+  const myH1 = document.createElement('h1');
+  myH1.textContent = obj['squadName'];
+  header.appendChild(myH1);
+
+  const myPara = document.createElement('p');
+  myPara.textContent = `Hometown: ${obj['homeTown']} // Formed: ${obj['formed']}`;
+  header.appendChild(myPara);
+}
